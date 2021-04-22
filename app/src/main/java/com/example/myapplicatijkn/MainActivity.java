@@ -256,7 +256,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_memPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    memValue += Float.parseFloat(answer.getText().toString());
+                } catch (Exception ignored) {
+                }
+            }
+        });
 
+        btn_memMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    memValue -= Float.parseFloat(answer.getText().toString());
+                } catch (Exception ignored) {
+                }
+            }
+        });
     }
 
     String calculateExpression(String expressionStr) {
